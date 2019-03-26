@@ -1,0 +1,14 @@
+class GameLogistics {
+    constructor() {
+        this.MAX_HEIGHT = 500;
+        this.MAX_WIDTH = 500;
+        this.MAX_DISTANCE = Math.floor(Math.sqrt(MAX_WIDTH * MAX_WIDTH + MAX_HEIGHT * MAX_HEIGHT));
+        this.MAX_MERCENARIES = 1;
+        this.MAX_SOLAR_SYSTEMS = 3;
+        this.SOLAR_SYSTEM_NAMES = ["Sombrero", "Cygnus", "Andromeda"];
+        
+    }
+
+}
+
+
