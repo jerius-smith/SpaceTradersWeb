@@ -13,7 +13,7 @@ window.onload = function() {
         }
     };
 
-    xhttp.open("GET", "https://1331a9f2.ngrok.io/get_location/" + sessionStorage.getItem("email") , true);
+    xhttp.open("GET", "https://287b63b6.ngrok.io/get_location/" + sessionStorage.getItem("email") , true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send();
 
@@ -28,7 +28,7 @@ window.onload = function() {
         }
     };
 
-    xhttp_cred.open("GET", "https://1331a9f2.ngrok.io/get_credits/" + sessionStorage.getItem("email") , true);
+    xhttp_cred.open("GET", "https://287b63b6.ngrok.io/get_credits/" + sessionStorage.getItem("email") , true);
     xhttp_cred.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp_cred.send();
 
