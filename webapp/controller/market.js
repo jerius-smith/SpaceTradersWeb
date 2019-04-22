@@ -13,7 +13,7 @@ window.onload = function() {
         }
     };
 
-    xhttp.open("GET", "http://localhost:5000/get_location/" + sessionStorage.getItem("email") , true);
+    xhttp.open("GET", "http://1331a9f2.ngrok.io/get_location/" + sessionStorage.getItem("email") , true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send();
 
@@ -29,7 +29,7 @@ window.onload = function() {
         }
     };
 
-    xhttp_cred.open("GET", "http://localhost:5000/get_credits/" + sessionStorage.getItem("email") , true);
+    xhttp_cred.open("GET", "http://1331a9f2.ngrok.io/get_credits/" + sessionStorage.getItem("email") , true);
     xhttp_cred.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp_cred.send();
 };
@@ -56,7 +56,7 @@ function getItems() {
         }
     };
 
-    xhttp.open("GET", "http://localhost:5000/get_inventories/" + sessionStorage.getItem("email") , true);
+    xhttp.open("GET", "http://1331a9f2.ngrok.io/get_inventories/" + sessionStorage.getItem("email") , true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send();
 }
@@ -79,7 +79,7 @@ function sellItem() {
         }
     };
 
-    xhttp.open("POST", "http://localhost:5000/sell_item/" + sessionStorage.getItem("email"), true);
+    xhttp.open("POST", "http://1331a9f2.ngrok.io/sell_item/" + sessionStorage.getItem("email"), true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send(JSON.stringify(item));
 }
@@ -104,7 +104,7 @@ function buyItem() {
         }
     };
 
-    xhttp.open("POST", "http://localhost:5000/buy_item/" + sessionStorage.getItem("email"), true);
+    xhttp.open("POST", "http://1331a9f2.ngrok.io/buy_item/" + sessionStorage.getItem("email"), true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send(JSON.stringify(item));
 }
