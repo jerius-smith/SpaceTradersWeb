@@ -43,7 +43,7 @@ function newPlayer() {
             "email": sessionStorage.getItem("email"),
             "pswrd": sessionStorage.getItem("pswrd"), 'data': player_info
         };
-        xhttp.open("POST", "http://localhost:5000/create_new_player", true);
+        xhttp.open("POST", "http://1331a9f2.ngrok.io/create_new_player", true);
         xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
         xhttp.send(JSON.stringify(req));
         console.log(xhttp.responseText);
