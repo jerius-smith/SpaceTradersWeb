@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Trader - Planet</title>
+    <script  src="../controller/planet.js"></script>
+    <style>
+        body {
+            background-image: url("../../res/web_bg_anim.gif");
+            background-size: cover;
+        }
+
+        .location {
+            font-size: medium;
+            font-family: Inconsolata, monospace;
+            color: #f4ebba;
+        }
+        p {
+            display: inline;
+        }
+        div {
+            display: inline;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <p style="margin-left: 10%" id="location" class="location"> Location: </p>
+        <p style="margin-left: 60%; text-align: right" id="credits" class="location"> Credits: </p>
+    </div>
+    <div>
+        <img style="width: 10%; height: 10%; margin-left: 10%; margin-top: 2%" src="../../res/travel_bttn.png" alt="Travel Button">
+        <a href="market.html">
+            <img style="width: 10%; height: 10%; margin-right: 10%; margin-top: 2%" align="right" src="../../res/market_bttn.png" alt="Market Button">
+        </a>
+    </div>
+    <div style="width: 100%; height: 50%">
+        <img style="max-width: 100%; max-height: 100%;" src="../../res/planet_web.png" alt="Red Planet">
+    </div>
+</body>
+
+</html>

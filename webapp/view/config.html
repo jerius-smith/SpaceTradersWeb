@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Space Trader - New Player Configuration</title>
+    <script src="../controller/config.js"></script>
+    <style>
+        body {
+            background-image: url("../../res/star_bg_web.png");
+            background-color: #cccccc;
+            background-size: cover;
+        }
+
+        .box {
+            background-color: #a1dbbc;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            border-radius: 10px;
+            border: 3px #78887f solid;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .config {
+            padding: 10px;
+            font-family: 'Inconsolata',monospace;
+            color: #78887f;
+        }
+        .input {
+            margin-bottom: 5px;
+            font-family: Inconsolata, monospace;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <form id="config_player" class="config">
+        <div style="text-align: center">New Player Configuration</div> <br><br>
+        Name : <input class="input" type="text" name="player_name"><br>
+        Difficulty:
+        <select name="prefDifficulty">
+            <option value="0">Beginner</option>
+            <option value="1">Easy</option>
+            <option value="2">Normal</option>
+            <option value="3">Hard</option>
+            <option value="4">Impossible</option>
+        </select><br>
+        Skill Points: <p  id="rem_skills"></p> <br>
+        <div style="padding-left:2em" >Pilot: <input id="pilotPoint" class="input" type="number" name="pilot_points" min="0" max="" onclick="updateSkillPoints()"></div><br>
+        <div style="padding-left:2em">Fighter: <input id="fighterPoint" class="input" type="number" name="fighter_points" min="0" max="" onclick="updateSkillPoints()"></div><br>
+        <div style="padding-left:2em">Trader: <input id="traderPoint" class="input" type="number" name="trader_points" min="0" max="" onclick="updateSkillPoints()"></div><br>
+        <div style="padding-left:2em">Engineer: <input id="engineerPoint" class="input" type="number" name="engineer_points" min="0" max="" onclick="updateSkillPoints()"></div><br><br>
+        <div style="text-align: center">
+            <input style="font-family: Inconsolata, monospace" type="button" value="Load Existing Player" onclick="loadExisting()">
+            <input style="font-family: Inconsolata, monospace" type="button" value="Create New Player" onclick="newPlayer()">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>

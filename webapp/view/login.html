@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceTrader Login</title>
+    <script src="../controller/login.js"></script>
+    <style>
+        body {
+            background-image: url("../../res/spacetrader_web_homescrn.png");
+            background-color: #cccccc;
+            background-size: cover;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            vertical-align: middle;
+
+        }
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 42%;
+        }
+
+        .box {
+            background-color: #a1dbbc;
+            position: absolute;
+            top: 46%;
+            left: 42%;
+            border-radius: 10px;
+            border: 3px #78887f solid;
+        }
+
+        .login {
+            padding: 10px;
+            font-family: 'Inconsolata',monospace;
+            color: #78887f;
+        }
+
+        .input {
+            margin-bottom: 5px;
+            font-family: Inconsolata, monospace;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form id="user_creds" class="login">
+            Email: <input class="input" type="text" name="email"><br>
+            Password: <input class="input" type="password" name="pswrd"><br>
+            <div style="text-align: center">
+                <input style="font-family: Inconsolata, monospace" type="button" value="Login" onclick="loginUser()">
+                <input style="font-family: Inconsolata, monospace" type="button" value="Create New User" onclick="newUser()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

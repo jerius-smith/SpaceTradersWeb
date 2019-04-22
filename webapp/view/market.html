@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="../controller/market.js"></script>
+    <title>Space Trader - Market</title>
+    <style>
+        body {
+            background-image: url("../../res/web_bg_anim.gif");
+            background-size: cover;
+        }
+
+        .box {
+            background-color: #a1dbbc;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            border-radius: 10px;
+            border: 3px #78887f solid;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .location {
+            font-size: medium;
+            font-family: Inconsolata, monospace;
+            color: #f4ebba;
+        }
+
+        p {
+            display: inline;
+        }
+        div {
+            display: inline;
+        }
+
+        .market {
+            padding: 10px;
+            font-family: 'Inconsolata',monospace;
+            color: #78887f;
+        }
+
+        .items{
+            margin-bottom: 5px;
+            font-family: Inconsolata, monospace;
+            width: 100%;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p style="margin-left: 10%" id="location" class="location"> Location: </p>
+        <p style="margin-left: 60%; text-align: right" id="credits" class="location"> Credits: </p>
+    </div>
+    <div class="box">
+        <div class="market" style="position: absolute; left: 35%; text-align: center">Market</div> <br><br>
+        <form id="market" class="market">
+            <div style="font-size: small">
+                <table>
+                    <tr>
+                        <th>Item,</th>
+                        <th>Price,</th>
+                        <th>Market Stock,</th>
+                        <th>Your Stock</th>
+                    </tr>
+                </table>
+            <select class="items" style="margin-bottom: 10px" id="items" name="items" size="10">
+            </select>
+            </div>
+            <br><br>
+            <div style="position: absolute; left: 35%; top: 88%; text-align: center; margin-bottom: 10px">
+                <input style="font-family: Inconsolata, monospace" type="button" value="Sell" onclick="sellItem()">
+                <input style="text-align: right; font-family: Inconsolata, monospace" type="button" value="Buy" onclick="buyItem()">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
