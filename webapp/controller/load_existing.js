@@ -14,7 +14,7 @@ window.onload = function() {
         }
     };
 
-    xhttp.open("GET", "http://1331a9f2.ngrok.io/get_players/" + sessionStorage.getItem("email") , true);
+    xhttp.open("GET", "https://1331a9f2.ngrok.io/get_players/" + sessionStorage.getItem("email") , true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send();
 };
@@ -24,7 +24,7 @@ function deletePlayer() {
 
     player = document.getElementById("load_players").elements.namedItem("players").value;
 
-    xhttp.open("POST", "http://1331a9f2.ngrok.io/delete_player/" + sessionStorage.getItem("email"), true);
+    xhttp.open("POST", "https://1331a9f2.ngrok.io/delete_player/" + sessionStorage.getItem("email"), true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send(JSON.stringify(player));
 
@@ -48,7 +48,7 @@ function loadPlayer() {
         }
     };
 
-    xhttp.open("POST", "http://1331a9f2.ngrok.io/load_player/" + sessionStorage.getItem("email"), true);
+    xhttp.open("POST", "https://1331a9f2.ngrok.io/load_player/" + sessionStorage.getItem("email"), true);
     xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
     xhttp.send(JSON.stringify(player));
 }

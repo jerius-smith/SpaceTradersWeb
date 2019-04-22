@@ -17,7 +17,7 @@ function newUser() {
         }
     };
 
-    xhttp.open("POST", "http://1331a9f2.ngrok.io/new_user", true);
+    xhttp.open("POST", "https://1331a9f2.ngrok.io/new_user", true);
     xhttp.send(JSON.stringify(req));
 }
 
@@ -36,7 +36,7 @@ function loginUser() {
         };
 
         console.log("Logging in...");
-        xhttp.open("POST", "http://1331a9f2.ngrok.io/login", true);
+        xhttp.open("POST", "https://1331a9f2.ngrok.io/login", true);
         xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
         xhttp.send(JSON.stringify(req));
         console.log(xhttp.responseText);
