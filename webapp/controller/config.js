@@ -38,7 +38,13 @@ function newPlayer() {
         console.log("Creating player: " + player_info);
 
         sessionStorage.setItem("current_name", player.elements.namedItem('player_name').value);
-
+        xhttp.onreadystatechange = function () {
+            if (xhttp.readyState == 4) {
+                if (xhttp.status == 200) {
+                    window.location.href = "../view/welcome.html";
+                }
+            }
+        };
         req = {
             "email": sessionStorage.getItem("email"),
             "pswrd": sessionStorage.getItem("pswrd"), 'data': player_info
@@ -46,8 +52,6 @@ function newPlayer() {
         xhttp.open("POST", "https://287b63b6.ngrok.io/create_new_player", true);
         xhttp.setRequestHeader("Access-Control-Allow-Origin", '*');
         xhttp.send(JSON.stringify(req));
-        console.log(xhttp.responseText);
-        window.location.href = "../view/welcome.html";
     } else if (sumSkills() < 16) {
         window.alert("Please use all 16 skill points.")
     } else {
