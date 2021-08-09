@@ -5,12 +5,12 @@ from datetime import datetime
 import re
 
 config = {
-    'apiKey': "AIzaSyBfasHtQvaMkvDK6t1JZGHYETn4K48Ov5I",
-    'authDomain': "spacetraders-4397c.firebaseapp.com",
-    'databaseURL': "https://spacetraders-4397c.firebaseio.com",
-    'projectId': "spacetraders-4397c",
-    'storageBucket': "spacetraders-4397c.appspot.com",
-    'messagingSenderId': "705495480529"
+    'apiKey': "",
+    'authDomain': "",
+    'databaseURL': "",
+    'projectId': "",
+    'storageBucket': "",
+    'messagingSenderId': ""
 }
 
 firebase = pyrebase.initialize_app(config)
